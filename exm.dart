@@ -38,6 +38,9 @@
 //   print(commonElements);
 // }
 
+
+
+
 // String reverseorder  (String str){
 //   List<String> words = str.split('');
 //   List<String> reverse = words.reversed.toList();
@@ -48,9 +51,7 @@
 //   String name = stdin.readLineSync() ??'';
 //   String reversename = reverseorder(name);
 //   print(reversename); 
-// }
-
-
+// 
 
 // null aware assignment operator
 // String? name;
@@ -180,3 +181,69 @@
 
 
 
+
+// import 'dart:io';
+
+// void main() {
+//   print('Enter the names');
+//   String cap = stdin.readLineSync()!;
+//   var capital = cap.split(" ").map((word) => word[0].toUpperCase() + word.substring(1)).join(' ');
+//   print(capital);
+// }
+
+
+// void main(){
+// List<int> a = [1,2,3,4,0,-1,-4,-6];
+// List<int> b =[];
+// List<int> c =[];
+// List<int> d =[];
+// for(int x in a){
+//  if(x<0){
+//   b.add(x);
+//  }else if(x>0){
+//   c.add(x);
+//  }else{
+//   d.add(x);
+//  }
+
+//   }
+//   print(a);
+//   print(b);
+//   print(c);
+//   print(d);
+
+// }
+
+// import 'dart:io';
+
+// void main() {
+//   print("enter the numbers");
+//   dynamic n=double.parse(stdin.readLineSync()!);
+//   double sum = 0;
+//   double avg = 0;
+//   for (var element in n) {
+//     sum+=element;
+//     avg=sum/element.length;
+//   }
+//   print(avg);
+// }
+
+
+import 'dart:io';
+
+void main() {
+  print("Enter 10 numbers separated by commas:");
+
+  String? input = stdin.readLineSync();
+  List<String> numbersAsString = input!.split(',');
+
+  List<double> numbers = numbersAsString.map((e) => double.parse(e)).toList();
+
+  double sum = 0;
+  for (var element in numbers) {
+    sum = sum + element;
+  }
+
+  double avg = sum / numbers.length;
+  print("Average: $avg");
+}
